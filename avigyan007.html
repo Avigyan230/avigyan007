@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Avigyan Challenge</title>
+	<style>
+		body {
+			font-size: medium;
+		}
+	</style>
+</head>
+<body>
+	<h1>Enter Password</h1>
+	<input type="password" id="password" />
+	<button onclick="checkPassword()">Submit</button>
+	
+	<div id="riddle1" style="display:none;">
+		<h1>Let's solve the riddle</h1>
+		<p>I am an odd number. Take away a Letter and i become even</p>
+		<input type="text" id="answer1" />
+		<button onclick="checkAnswer1()">Submit</button>
+	</div>
+	
+	<div id="mathProblem" style="display:none;">
+		<h1>Solve the math problem</h1>
+		<p>16*19 = ?</p>
+		<input type="number" id="answer2" />
+		<button onclick="checkAnswer2()">Submit</button>
+	</div>
+	
+	<div id="riddle2" style="display:none;">
+		<h1>Let's solve the riddle</h1>
+		<p>What has hands but can't clap?</p>
+		<input type="text" id="answer3" />
+		<button onclick="checkAnswer3()">Submit</button>
+	</div>
+	
+	<div id="winMessage" style="display:none;">
+		<h1>You have won! You are now a proja of Avigyan.</h1>
+	</div>
+	
+	<script>
+		function checkPassword() {
+			var password = document.getElementById("password").value;
+			if (password === "Avigyan") {
+				document.getElementById("riddle1").style.display = "block";
+			} else {
+				alert("Wrong password!");
+			}
+		}
+		
+		function checkAnswer1() {
+			var answer = document.getElementById("answer1").value;
+			if (answer === "seven") {
+				document.getElementById("mathProblem").style.display = "block";
+			} else {
+				alert("Wrong answer!");
+			}
+		}
+		
+		function checkAnswer2() {
+			var answer = document.getElementById("answer2").value;
+			if (answer === "304") {
+				document.getElementById("riddle2").style.display = "block";
+			} else {
+				alert("Wrong answer!");
+			}
+		}
+		
+		function checkAnswer3() {
+			var answer = document.getElementById("answer3").value;
+			if (answer === "clock") {
+				document.getElementById("winMessage").style.display = "block";
+			} else {
+				alert("Wrong answer!");
+			}
+		}
+	</script>
+</body>
+</html>
+
